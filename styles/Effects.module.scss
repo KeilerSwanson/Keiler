@@ -1,0 +1,17 @@
+@media screen and (min-width: 1366px) {
+	.button:hover {
+		color: var(--b1);
+	}
+
+	.button:hover::before, .button:hover::after {
+		transform: translate(0, 0);
+	}
+}
+
+.button:active {
+	color: var(--b1);
+}
+
+.button:active::before, .button:hover::after {
+	transform: translate(0, 0);
+}

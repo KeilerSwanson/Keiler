@@ -1,0 +1,48 @@
+.landing {
+	display: flex;
+	align-items: center;
+	padding: 0 5%;
+	height: 100vh;
+	width: 100vw;
+}
+
+.header {
+
+}
+
+.heading {
+	font-size: 5.5rem;
+	font-weight: 900;
+}
+
+.text {
+	font-size: 1.8rem;
+	font-weight: 300;
+	line-height: 1.4;
+	margin: 2rem 0 3.5rem;
+}
+
+.header > button {
+	left: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+	.text {
+		width: 75%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.landing {
+		padding: 0 10%;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	.landing {
+		padding: 0 15%;
+	}
+	.text {
+		width: 50%;
+	}
+}

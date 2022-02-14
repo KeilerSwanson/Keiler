@@ -1,0 +1,43 @@
+.cubeField {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	z-index: -1;
+}
+
+.cubeFieldInner {
+	position: absolute;
+	height: 50%;
+	width: 200%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	animation: scroll 5s linear infinite;
+	will-change: transform;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.cubeFieldInner {
+		animation: scroll 10s linear infinite;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	.cubeFieldInner {
+		animation: scroll 12.5s linear infinite;
+	}
+}

@@ -1,0 +1,143 @@
+.nav {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100vw;
+	padding: 0 5%;
+	background-color: var(--b2);
+}
+
+.menuBtn {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem 0;
+	height: 100%;
+	width: 3.5rem;
+	background: transparent;
+	// transition: .25s ease-in-out;
+}
+
+.menuBtnCrossed {
+	composes: menuBtn;
+	transform: rotate(-90deg);
+}
+
+.menuBtnCrossed > .barOne {
+	transform: translateY(0) rotate(-45deg);
+}
+
+.menuBtnCrossed > .barTwo {
+	transform: translateY(0) rotate(45deg);
+}
+
+.bar {
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background: var(--b1);
+	// transition: .25s ease-in-out;
+}
+
+.barOne {
+	composes: bar;
+	transform: translateY(-5px);
+}
+
+.barTwo {
+	composes: bar;
+	transform: translateY(5px);
+}
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--b2);
+	transform: translateY(-100%);
+	// transition: .25s ease-in-out;
+}
+
+@supports (backdrop-filter: blur()) {
+	.nav, .menu {
+		backdrop-filter: blur(10px);
+		background-color: var(--b3opaque);
+	}
+}
+
+.menuOpen {
+	composes: menu;
+	transform: translateY(0);
+}
+
+.menuItem {
+	font-size: 2.5rem;
+	font-weight: 400;
+}
+
+.menuItem::before {
+	font-size: 2.5rem;
+	font-weight: 400;
+	color: var(--b1);
+	margin-right: 5px;
+}
+
+.menuItem:nth-child(1)::before {
+	content: '01.'
+}
+
+.menuItem:nth-child(2)::before {
+	content: '02.'
+}
+
+.menuItem:nth-child(3)::before {
+	content: '03.'
+}
+
+@media screen and (min-width: 768px) {
+	.menuBtn {
+		display: none;
+	}
+	.menu {
+		position: unset;;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 3rem;
+		height: unset;
+		width: unset;
+		padding: 3rem 0;
+		background-color: transparent;
+		transform: translateY(0);
+	}
+	.menuItem, .menuItem::before {
+		font-size: 1.6rem;
+		font-weight: 400;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.nav {
+		padding: 0 10%;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	.nav {
+		padding: 0 15%;
+	}
+	.menuItem:hover {
+		color: var(--b1);
+	}
+}
