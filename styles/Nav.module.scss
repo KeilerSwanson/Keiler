@@ -7,6 +7,7 @@
 	width: 100vw;
 	padding: 0 5%;
 	background-color: var(--b2);
+	z-index: 2;
 }
 
 .menuBtn {
@@ -83,12 +84,12 @@
 
 .menuItem {
 	font-size: 2.5rem;
-	font-weight: 400;
+	font-weight: 700;
 }
 
 .menuItem::before {
 	font-size: 2.5rem;
-	font-weight: 400;
+	font-weight: 700;
 	color: var(--b1);
 	margin-right: 5px;
 }
@@ -122,8 +123,8 @@
 		transform: translateY(0);
 	}
 	.menuItem, .menuItem::before {
-		font-size: 1.6rem;
-		font-weight: 400;
+		font-size: 1.4rem;
+		font-weight: 500;
 	}
 }
 
@@ -139,5 +140,11 @@
 	}
 	.menuItem:hover {
 		color: var(--b1);
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.nav {
+		padding: 0 20%;
 	}
 }

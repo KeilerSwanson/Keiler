@@ -3,6 +3,7 @@ import { useState } from 'react'
 import CubeField from '../comps/CubeField'
 import Nav from '../comps/Nav'
 import Landing from '../comps/Landing'
+import About from '../comps/About'
 
 export default function Index() {
   const [menuOpen, openMenu] = useState(false)
@@ -25,6 +26,7 @@ export default function Index() {
       />
       <main>
         <Landing />
+        <About />
       </main>
     </div>
   )

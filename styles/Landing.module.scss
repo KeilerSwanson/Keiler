@@ -6,23 +6,18 @@
 	width: 100vw;
 }
 
-.header {
-
-}
-
 .heading {
-	font-size: 5.5rem;
+	font-size: 6rem;
 	font-weight: 900;
 }
 
 .text {
 	font-size: 1.8rem;
 	font-weight: 300;
-	line-height: 1.4;
 	margin: 2rem 0 3.5rem;
 }
 
-.header > button {
+.content > button {
 	left: .5rem;
 }
 
@@ -44,5 +39,11 @@
 	}
 	.text {
 		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.landing {
+		padding: 0 20%;
 	}
 }
