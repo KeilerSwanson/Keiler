@@ -47,15 +47,26 @@ menu, ol, ul {
   margin: 0;
 }
 
-button, a, input {
+button, a, input, textarea {
   border: none;
   text-decoration: none;
   outline: none;
   color: inherit;
+}
+
+button, a {
   cursor: pointer;
 }
 
-h1, h2, h3, h4, h5, h6, p, li {
+label {
+  visibility: hidden;
+  position: absolute;
+  height: 0;
+  width: 0;
+  user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, input, textarea {
   margin: 0;
   padding: 0;
   color: var(--txt);
@@ -70,10 +81,3 @@ p {
     font-size: 11px;
   }
 }
-
-/* @media screen and (min-width: 1024px) {
-  :root {
-    font-size: 12px;
-  }
-} */
-

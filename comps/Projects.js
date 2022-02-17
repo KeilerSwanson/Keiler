@@ -25,7 +25,7 @@ export default function Projects() {
 						className={styles.video}
 						autoPlay
 						loop 
-						// controls 
+						controls 
 						muted
 						poster='/assets/rhetoric-poster.png'
 					>

@@ -5,6 +5,7 @@ import Nav from '../comps/Nav'
 import Landing from '../comps/Landing'
 import About from '../comps/About'
 import Projects from '../comps/Projects'
+import Contact from '../comps/Contact'
 
 export default function Index() {
   const aboutRef = useRef()
@@ -42,6 +43,7 @@ export default function Index() {
           aboutRef={aboutRef}
         />
         <Projects />
+        <Contact />
       </main>
     </div>
   )
