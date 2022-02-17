@@ -1,14 +1,25 @@
 import Head from 'next/head'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import CubeField from '../comps/CubeField'
 import Nav from '../comps/Nav'
 import Landing from '../comps/Landing'
 import About from '../comps/About'
+import Projects from '../comps/Projects'
 
 export default function Index() {
+  const aboutRef = useRef()
   const [menuOpen, openMenu] = useState(false)
 
   const toggleMenu = () => openMenu(!menuOpen)
+
+  function scrollToAbout() {
+    console.log(aboutRef.current.getBoundingClientRect())
+    window.scrollTo({
+      top: aboutRef.current.getBoundingClientRect().top - window.pageYOffset,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }
 
   return (
     <div>
@@ -23,10 +34,14 @@ export default function Index() {
       <Nav 
         menuOpen={menuOpen}
         toggleMenu={toggleMenu}
+        scrollToAbout={scrollToAbout}
       />
       <main>
         <Landing />
-        <About />
+        <About 
+          aboutRef={aboutRef}
+        />
+        <Projects />
       </main>
     </div>
   )

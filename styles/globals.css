@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background: var(--b1);
+  color: var(--b3);
+}
+
 :root {
   margin: 0;
   padding: 0;
@@ -60,20 +65,15 @@ p {
   line-height: 1.3;
 }
 
-p::selection {
-	background: var(--b1);
-	color: var(--b3);
-}
-
 @media screen and (min-width: 768px) {
   :root {
     font-size: 11px;
   }
 }
 
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
   :root {
-    font-size: 11px;
+    font-size: 12px;
   }
-}
+} */
 

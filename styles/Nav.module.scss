@@ -28,11 +28,11 @@
 	transform: rotate(-90deg);
 }
 
-.menuBtnCrossed > .barOne {
+.menuBtnCrossed > .bar1 {
 	transform: translateY(0) rotate(-45deg);
 }
 
-.menuBtnCrossed > .barTwo {
+.menuBtnCrossed > .bar2 {
 	transform: translateY(0) rotate(45deg);
 }
 
@@ -44,12 +44,12 @@
 	// transition: .25s ease-in-out;
 }
 
-.barOne {
+.bar1 {
 	composes: bar;
 	transform: translateY(-5px);
 }
 
-.barTwo {
+.bar2 {
 	composes: bar;
 	transform: translateY(5px);
 }
@@ -85,6 +85,7 @@
 .menuItem {
 	font-size: 2.5rem;
 	font-weight: 700;
+	cursor: pointer;
 }
 
 .menuItem::before {
@@ -115,10 +116,10 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: 3rem;
+		gap: 2.5rem;
 		height: unset;
 		width: unset;
-		padding: 3rem 0;
+		padding: 2.5rem 0;
 		background-color: transparent;
 		transform: translateY(0);
 	}

@@ -5,14 +5,17 @@ import Button from './Button'
 import sections from '../styles/Sections.module.scss'
 import styles from '../styles/About.module.scss'
 
-export default function About() {
+export default function About({ aboutRef }) {
 	return (
-		<section className={`${styles.about} ${sections.main}`}>
+		<section 
+			ref={aboutRef}
+			className={`${styles.about} ${sections.main}`}	
+		>
 			<SectHead num='01.' title='About' />
 			<div>
 				<span className={styles.avatar}>
 					<Image 
-						src='/images/avatar.jpeg' 
+						src='/assets/avatar.jpeg' 
 						// layout='fill'
 						// objectFit='contain'
 						width={500} 
@@ -28,14 +31,14 @@ export default function About() {
 						<br /><br />
 						In the time since I’ve focused primarily on the front-end, learning technologies from basic HTML and CSS to more advanced frameworks like NextJS. I'm always picking up new tools and methods but I'm currently most comfortable with: 
 					</p>
-					<ul className={styles.skillList}>
-						<li className={styles.skill}>HTML</li>
-						<li className={styles.skill}>CSS / SCSS</li>
-						<li className={styles.skill}>JavaScript</li>
-						<li className={styles.skill}>ReactJS</li>
-						<li className={styles.skill}>NextJS</li>
-						<li className={styles.skill}>Git</li>
-						<li className={styles.skill}>Netlify</li>
+					<ul className={styles.stack}>
+						<li className={styles.tool}>HTML</li>
+						<li className={styles.tool}>CSS / SCSS</li>
+						<li className={styles.tool}>JavaScript</li>
+						<li className={styles.tool}>ReactJS</li>
+						<li className={styles.tool}>NextJS</li>
+						<li className={styles.tool}>Git</li>
+						<li className={styles.tool}>Netlify</li>
 					</ul>
 				</div>
 			</div>

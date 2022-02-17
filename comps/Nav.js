@@ -1,6 +1,6 @@
 import styles from '../styles/Nav.module.scss'
 
-export default function Nav({ menuOpen, toggleMenu }) {
+export default function Nav({ menuOpen, toggleMenu, scrollToAbout }) {
 	const menuClass = menuOpen ? styles.menuOpen : styles.menu
 	const menuBtnClass = menuOpen ? styles.menuBtnCrossed : styles.menuBtn
 
@@ -9,7 +9,7 @@ export default function Nav({ menuOpen, toggleMenu }) {
 			<menu className={menuClass}>
 				<li
 					className={styles.menuItem}
-					// onClick={}
+					onClick={scrollToAbout}
 				>
 					About
 				</li>
@@ -30,8 +30,8 @@ export default function Nav({ menuOpen, toggleMenu }) {
 				className={menuBtnClass}
 				onClick={toggleMenu}
 			>
-				<span className={styles.barOne} />
-				<span className={styles.barTwo} />
+				<span className={styles.bar1} />
+				<span className={styles.bar2} />
 			</button>
 		</nav>
 	)
