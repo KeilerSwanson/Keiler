@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
+// import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import SectHead from './SectHead'
-import Button from './Button'
+// import Button from './Button'
 import sections from '../styles/Sections.module.scss'
 import styles from '../styles/About.module.scss'
 
@@ -40,6 +40,14 @@ export default function About({ aboutRef }) {
 						<li className={styles.tool}>Git</li>
 						<li className={styles.tool}>Netlify</li>
 					</ul>
+					{/* <span className={styles.links}>
+						<a href='https://linkedin.com/in/keiler-swanson/' target='_blank' rel='noreferrer'>
+							<FaLinkedin />
+						</a>
+						<a href='https://github.com/KeilerSwanson' target='_blank' rel='noreferrer'>
+							<FaGithubSquare />
+						</a>
+					</span> */}
 				</div>
 			</div>
 		</section>

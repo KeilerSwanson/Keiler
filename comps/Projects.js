@@ -1,8 +1,10 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import SectHead from './SectHead'
-import { BsGithub, BsFillArrowUpCircleFill } from 'react-icons/bs'
+// import { FaGithub, FaArrowUp, FaExternalLinkAlt } from 'react-icons/fa'
+import { RiGithubFill, RiExternalLinkLine  } from 'react-icons/ri'
 import sections from '../styles/Sections.module.scss'
 import styles from '../styles/Projects.module.scss'
+import effects from '../styles/Effects.module.scss'
 
 export default function Projects() {
 	return (
@@ -13,14 +15,6 @@ export default function Projects() {
 			/>
 			<div className={styles.content}>
 				<li className={styles.project}>
-					{/* <span className={styles.image}>
-						<Image 
-							src='/images/rhetoric.gif'
-							width={1200}
-							height={600}
-							alt='Screenshot of Rhetoric'
-						/>
-					</span> */}
 					<video 
 						className={styles.video}
 						autoPlay
@@ -33,7 +27,17 @@ export default function Projects() {
 						<source src='/assets/rhetoric-demo.mp4' type='video/mp4' />
 					</video>
 					<div className={styles.info}>
-						<h3 className={styles.title}>Rhetoric</h3>
+						<span className={styles.titleLinks}>
+							<h3 className={styles.title}>Rhetoric</h3>
+							<span className={styles.links}>
+								<a className={`${styles.link} ${effects.link}`} href='https://github.com/KeilerSwanson/Rhetoric' target='_blank' rel='noreferrer'>
+									<RiGithubFill />
+								</a>
+								<a className={`${styles.link} ${effects.link}`} href='https://happy-sinoussi-d8a6c3.netlify.app/' target='_blank' rel='noreferrer'>
+									<RiExternalLinkLine/>
+								</a>
+							</span>
+						</span>
 						<p className={styles.description}>
 							A tool for comparing news coverage across the media landscape. Search for articles by topic, select from more than 50 media sources, and bookmark articles for later.
 						</p>
@@ -42,6 +46,14 @@ export default function Projects() {
 							<li className={styles.tool}>SCSS Modules</li>
 							<li className={styles.tool}>Newscatcher</li>
 						</ul>
+						{/* <span className={styles.links}>
+							<a className={`${styles.link} ${effects.link}`} href='https://github.com/KeilerSwanson/Rhetoric' target='_blank' rel='noreferrer'>
+								<RiGithubFill />
+							</a>
+							<a className={`${styles.link} ${effects.link}`} href='https://happy-sinoussi-d8a6c3.netlify.app/' target='_blank' rel='noreferrer'>
+								<RiExternalLinkLine/>
+							</a>
+						</span> */}
 					</div>
 				</li>
 			</div>

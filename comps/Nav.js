@@ -1,3 +1,4 @@
+import { RiGithubFill, RiLinkedinFill  } from 'react-icons/ri'
 import styles from '../styles/Nav.module.scss'
 
 export default function Nav({ menuOpen, toggleMenu, scrollToAbout }) {
@@ -24,6 +25,14 @@ export default function Nav({ menuOpen, toggleMenu, scrollToAbout }) {
 					// onClick={}
 				>
 					Contact
+				</li>
+				<li className={styles.links}>
+					<a className={styles.link} href='https://github.com/KeilerSwanson' target='_blank' rel='noreferrer'>
+						<RiGithubFill />
+					</a>
+					<a className={styles.link} href='https://linkedin.com/in/keiler-swanson/' target='_blank' rel='noreferrer'>
+						<RiLinkedinFill />
+					</a>
 				</li>
 			</menu>
 			<button 

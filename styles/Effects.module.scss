@@ -6,6 +6,14 @@
 	.button:hover::before, .button:hover::after {
 		transform: translate(0, 0);
 	}
+
+	.link:hover {
+		color: var(--b3);
+	}
+
+	.link:hover::after {
+		height: 100%;
+	}
 }
 
 .button:active {
@@ -14,4 +22,12 @@
 
 .button:active::before, .button:hover::after {
 	transform: translate(0, 0);
+}
+
+.link:active {
+	color: var(--b3);
+}
+
+.link:active::after {
+	height: 100%;
 }

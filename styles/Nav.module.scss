@@ -20,7 +20,6 @@
 	height: 100%;
 	width: 3.5rem;
 	background: transparent;
-	// transition: .25s ease-in-out;
 }
 
 .menuBtnCrossed {
@@ -41,7 +40,6 @@
 	height: 2px;
 	width: 100%;
 	background: var(--b1);
-	// transition: .25s ease-in-out;
 }
 
 .bar1 {
@@ -67,7 +65,6 @@
 	width: 100vw;
 	background-color: var(--b2);
 	transform: translateY(-100%);
-	// transition: .25s ease-in-out;
 }
 
 @supports (backdrop-filter: blur()) {
@@ -83,7 +80,7 @@
 }
 
 .menuItem {
-	font-size: 2.25rem;
+	font-size: 2.5rem;
 	font-weight: 700;
 	cursor: pointer;
 }
@@ -107,6 +104,26 @@
 	content: '03.'
 }
 
+.links {
+	display: flex;
+	gap: 1rem;
+	position: relative;
+	bottom: 2px;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.link > svg {
+	color: var(--b1);
+	font-size: 2.75rem;
+}
+
+
 @media screen and (min-width: 768px) {
 	.menuBtn {
 		display: none;
@@ -126,6 +143,12 @@
 	.menuItem, .menuItem::before {
 		font-size: 1.4rem;
 		font-weight: 500;
+	}
+	.links {
+		gap: .75rem;
+	}
+	.link > svg {
+		font-size: 2.25rem;
 	}
 }
 
