@@ -1,7 +1,7 @@
 import Button from './Button'
 import styles from '../styles/Landing.module.scss'
 
-export default function Landing() {
+export default function Landing({ projectsRef, scrollTo }) {
 
 	return (
 		<section className={styles.landing}>
@@ -16,7 +16,7 @@ export default function Landing() {
 				</p>
 				<Button 
 					text='Check Out My Work'
-					// handler={}
+					handler={() => scrollTo(projectsRef)}
 				/>
 			</header>
 		</section>

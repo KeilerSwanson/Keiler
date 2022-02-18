@@ -6,9 +6,12 @@ import sections from '../styles/Sections.module.scss'
 import styles from '../styles/Projects.module.scss'
 import effects from '../styles/Effects.module.scss'
 
-export default function Projects() {
+export default function Projects({ sectRef }) {
 	return (
-		<section className={`${styles.projects} ${sections.main}`}>
+		<section 
+			ref={sectRef}
+			className={`${styles.projects} ${sections.main}`}
+		>
 			<SectHead
 				num='02.'
 				title='Projects'

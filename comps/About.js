@@ -1,23 +1,20 @@
 import Image from 'next/image'
-// import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import SectHead from './SectHead'
-// import Button from './Button'
 import sections from '../styles/Sections.module.scss'
 import styles from '../styles/About.module.scss'
+import effects from '../styles/Effects.module.scss'
 
-export default function About({ aboutRef }) {
+export default function About({ sectRef }) {
 	return (
 		<section 
-			ref={aboutRef}
+			ref={sectRef}
 			className={`${styles.about} ${sections.main}`}	
 		>
 			<SectHead num='01.' title='About' />
 			<div>
-				<span className={styles.avatar}>
+				<span className={`${styles.avatar} ${effects.avatar}`}>
 					<Image 
 						src='/assets/avatar.jpeg' 
-						// layout='fill'
-						// objectFit='contain'
 						width={500} 
 						height={500} 
 						placeholder='blur' 
@@ -40,14 +37,6 @@ export default function About({ aboutRef }) {
 						<li className={styles.tool}>Git</li>
 						<li className={styles.tool}>Netlify</li>
 					</ul>
-					{/* <span className={styles.links}>
-						<a href='https://linkedin.com/in/keiler-swanson/' target='_blank' rel='noreferrer'>
-							<FaLinkedin />
-						</a>
-						<a href='https://github.com/KeilerSwanson' target='_blank' rel='noreferrer'>
-							<FaGithubSquare />
-						</a>
-					</span> */}
 				</div>
 			</div>
 		</section>

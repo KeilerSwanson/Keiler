@@ -6,50 +6,20 @@
 	align-items: center;
 	width: 100vw;
 	padding: 0 5%;
-	background-color: var(--b2);
+	background: var(--b2);
 	z-index: 2;
 }
 
-.menuBtn {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 3rem 0;
-	height: 100%;
-	width: 3.5rem;
-	background: transparent;
+@supports (backdrop-filter: blur()) {
+	.nav {
+		background: var(--b3opaque);
+		backdrop-filter: blur(5px);
+	}
 }
 
-.menuBtnCrossed {
-	composes: menuBtn;
-	transform: rotate(-90deg);
-}
-
-.menuBtnCrossed > .bar1 {
-	transform: translateY(0) rotate(-45deg);
-}
-
-.menuBtnCrossed > .bar2 {
-	transform: translateY(0) rotate(45deg);
-}
-
-.bar {
-	position: absolute;
-	height: 2px;
-	width: 100%;
-	background: var(--b1);
-}
-
-.bar1 {
-	composes: bar;
-	transform: translateY(-5px);
-}
-
-.bar2 {
-	composes: bar;
-	transform: translateY(5px);
+.navClear {
+	composes: nav;
+	backdrop-filter: none;
 }
 
 .menu {
@@ -63,26 +33,28 @@
 	gap: 3rem;
 	height: 100vh;
 	width: 100vw;
-	background-color: var(--b2);
+	background: var(--b2);
 	transform: translateY(-100%);
+	will-change: transform;
+	transition: var(--t2);
+}
+
+.navClear > .menu {
+	transform: translateY(0);
 }
 
 @supports (backdrop-filter: blur()) {
-	.nav, .menu {
-		backdrop-filter: blur(10px);
-		background-color: var(--b3opaque);
+	.navClear > .menu {
+		background: var(--b3opaque);
+		backdrop-filter: blur(5px);
 	}
-}
-
-.menuOpen {
-	composes: menu;
-	transform: translateY(0);
 }
 
 .menuItem {
 	font-size: 2.5rem;
 	font-weight: 700;
 	cursor: pointer;
+	transition: var(--t1);
 }
 
 .menuItem::before {
@@ -116,6 +88,8 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	will-change: transform;
+	transition: var(--t1);
 }
 
 .link > svg {
@@ -123,6 +97,51 @@
 	font-size: 2.75rem;
 }
 
+.menuBtn {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem 0;
+	height: 100%;
+	width: 3rem;
+	background: transparent;
+	will-change: transform;
+	transition: var(--t2);
+}
+
+.menuBtnCrossed {
+	composes: menuBtn;
+	transform: rotate(-90deg);
+}
+
+.menuBtnCrossed > .bar1 {
+	transform: translateY(0) rotate(-45deg);
+}
+
+.menuBtnCrossed > .bar2 {
+	transform: translateY(0) rotate(45deg);
+}
+
+.bar {
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background: var(--b1);
+	will-change: transform;
+	transition: var(--t2);
+}
+
+.bar1 {
+	composes: bar;
+	transform: translateY(-5px);
+}
+
+.bar2 {
+	composes: bar;
+	transform: translateY(5px);
+}
 
 @media screen and (min-width: 768px) {
 	.menuBtn {

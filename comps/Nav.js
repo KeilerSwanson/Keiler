@@ -1,36 +1,52 @@
 import { RiGithubFill, RiLinkedinFill  } from 'react-icons/ri'
 import styles from '../styles/Nav.module.scss'
+import effects from '../styles/Effects.module.scss'
 
-export default function Nav({ menuOpen, toggleMenu, scrollToAbout }) {
-	const menuClass = menuOpen ? styles.menuOpen : styles.menu
+export default function Nav({ menuOpen, toggleMenu, scrollTo, navRef, aboutRef, projectsRef, contactRef }) {
+	const navClass = menuOpen ? styles.navClear : styles.nav
 	const menuBtnClass = menuOpen ? styles.menuBtnCrossed : styles.menuBtn
 
+	console.log(aboutRef)
+
 	return (
-		<nav className={styles.nav}>
-			<menu className={menuClass}>
+		<nav 
+			ref={navRef} 
+			className={navClass}
+		>
+			<menu className={styles.menu}>
 				<li
 					className={styles.menuItem}
-					onClick={scrollToAbout}
+					onClick={() => scrollTo(aboutRef)}
 				>
 					About
 				</li>
 				<li
 					className={styles.menuItem}
-					// onClick={}
+					onClick={() => scrollTo(projectsRef)}
 				>
 					Projects
 				</li>
 				<li
 					className={styles.menuItem}
-					// onClick={}
+					onClick={() => scrollTo(contactRef)}
 				>
 					Contact
 				</li>
 				<li className={styles.links}>
-					<a className={styles.link} href='https://github.com/KeilerSwanson' target='_blank' rel='noreferrer'>
+					<a 
+						className={`${styles.link} ${effects.link}`} 
+						href='https://github.com/KeilerSwanson' 
+						target='_blank' 
+						rel='noreferrer'
+					>
 						<RiGithubFill />
 					</a>
-					<a className={styles.link} href='https://linkedin.com/in/keiler-swanson/' target='_blank' rel='noreferrer'>
+					<a 
+						className={`${styles.link} ${effects.link}`} 
+						href='https://linkedin.com/in/keiler-swanson/' 
+						target='_blank' 
+						rel='noreferrer'
+					>
 						<RiLinkedinFill />
 					</a>
 				</li>

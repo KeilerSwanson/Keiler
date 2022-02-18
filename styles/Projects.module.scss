@@ -13,7 +13,7 @@
 
 .video {
 	max-width: 700px;
-	margin: 0 0 1.5rem 0;
+	margin: 0 0 2.5rem 0;
 }
 
 .info {
@@ -43,6 +43,8 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	will-change: transform;
+	transition: var(--t1);
 }
 
 .link > svg {
@@ -80,10 +82,17 @@
 	}
 	.info {
 		align-items: flex-end;
+		width: 50%;
 	}
 	.titleLinks {
 		flex-direction: row-reverse;
 		gap: 2.5rem;
+	}
+	.links {
+		gap: .75rem;
+	}
+	.link > svg {
+		font-size: 2.25rem;
 	}
 	.title, .description {
 		text-align: right;

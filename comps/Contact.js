@@ -4,10 +4,13 @@ import Button from './Button'
 import sections from '../styles/Sections.module.scss'
 import styles from '../styles/Contact.module.scss'
 
-export default function Contact() {
+export default function Contact({ sectRef }) {
 
 	return (
-		<div className={`${sections.main} ${styles.contact}`}>
+		<div 
+			ref={sectRef}
+			className={`${sections.main} ${styles.contact}`}
+		>
 			<SectHead
 				num='03.'
 				title='Contact'

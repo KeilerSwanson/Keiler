@@ -8,18 +8,23 @@ import Projects from '../comps/Projects'
 import Contact from '../comps/Contact'
 
 export default function Index() {
-  const aboutRef = useRef()
+  const refs = {
+    nav: useRef(),
+    about: useRef(),
+    projects: useRef(),
+    contact: useRef()
+  }
   const [menuOpen, openMenu] = useState(false)
 
   const toggleMenu = () => openMenu(!menuOpen)
 
-  function scrollToAbout() {
-    console.log(aboutRef.current.getBoundingClientRect())
+  function scrollTo(ref) {
     window.scrollTo({
-      top: aboutRef.current.getBoundingClientRect().top - window.pageYOffset,
+      top: ref.current.getBoundingClientRect().top + refs.nav.current.getBoundingClientRect().height + window.pageYOffset,
       left: 0,
       behavior: 'smooth'
     })
+    if (menuOpen) toggleMenu()
   }
 
   return (
@@ -35,15 +40,26 @@ export default function Index() {
       <Nav 
         menuOpen={menuOpen}
         toggleMenu={toggleMenu}
-        scrollToAbout={scrollToAbout}
+        scrollTo={scrollTo}
+        navRef={refs.nav}
+        aboutRef={refs.about}
+        projectsRef={refs.projects}
+        contactRef={refs.contact}
       />
       <main>
-        <Landing />
-        <About 
-          aboutRef={aboutRef}
+        <Landing 
+          projectsRef={refs.projects}
+          scrollTo={scrollTo}
         />
-        <Projects />
-        <Contact />
+        <About 
+          sectRef={refs.about}
+        />
+        <Projects 
+          sectRef={refs.projects}
+        />
+        <Contact 
+          sectRef={refs.contact}
+        />
       </main>
     </div>
   )
