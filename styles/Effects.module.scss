@@ -7,8 +7,8 @@
 		transform: translate(0);
 	}
 
-	.link:hover {
-		transform: translateY(-.2rem);
+	.link:hover > svg {
+		transform: translateY(-.2rem) !important;
 	}
 
 	.avatar:hover {
@@ -20,6 +20,10 @@
 		background: var(--b1opaque);
 		z-index: 2;
 		border: none;
+	}
+
+	.menuItem:hover {
+		color: var(--b1);
 	}
 }
 
@@ -44,4 +48,54 @@
 	background: var(--b1opaque);
 	z-index: 2;
 	border: none;
+}
+
+.menuItem:active {
+	color: var(--b1);
+}
+
+@keyframes fadeLeft {
+	from {
+		opacity: 0;
+		transform: translateX(2.5rem);
+	} to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(2.5rem);
+	} to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.preFadeLeft {
+	opacity: 0;
+	transform: translateX(2.5rem);
+}
+
+.fadeLeft {
+	composes: preFadeLeft;
+	animation-name: fadeLeft;
+	animation-duration: var(--t4);
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.preFadeUp {
+	opacity: 0;
+	transform: translateY(2.5rem);
+}
+
+.fadeUp {
+	composes: preFadeUp;
+	animation-name: fadeUp;
+	animation-duration: var(--t4);
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
 }

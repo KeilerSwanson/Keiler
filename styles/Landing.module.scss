@@ -9,16 +9,19 @@
 .heading {
 	font-size: 6rem;
 	font-weight: 900;
+	animation-delay: var(--t1);
 }
 
 .text {
 	font-size: 1.8rem;
 	font-weight: 300;
 	margin: 2rem 0 3.5rem;
+	animation-delay: var(--t2);
 }
 
 .content > button {
 	left: .5rem;
+	animation-delay: var(--t3);
 }
 
 @media screen and (min-width: 768px) {

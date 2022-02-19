@@ -36,7 +36,7 @@
 	background: var(--b2);
 	transform: translateY(-100%);
 	will-change: transform;
-	transition: var(--t2);
+	transition: var(--t3) linear;
 }
 
 .navClear > .menu {
@@ -54,7 +54,19 @@
 	font-size: 2.5rem;
 	font-weight: 700;
 	cursor: pointer;
-	transition: var(--t1);
+	transition: var(--t1) linear;
+}
+
+.menuItem:nth-child(1) {
+	animation-delay: var(--t4);
+}
+
+.menuItem:nth-child(2) {
+	animation-delay: var(--t5);
+}
+
+.menuItem:nth-child(3) {
+	animation-delay: var(--t6);
 }
 
 .menuItem::before {
@@ -89,12 +101,25 @@
 	justify-content: center;
 	cursor: pointer;
 	will-change: transform;
-	transition: var(--t1);
+	// transition: var(--t1) linear;
+}
+
+.link:nth-child(1) {
+	animation-delay: var(--t7);
+}
+
+.link:nth-child(2) {
+	animation-delay: var(--t8);
 }
 
 .link > svg {
 	color: var(--b1);
 	font-size: 2.75rem;
+	transition: var(--t1) linear;
+}
+
+.menuBtnWrap {
+	animation-delay: var(--t4);
 }
 
 .menuBtn {
@@ -108,7 +133,9 @@
 	width: 3rem;
 	background: transparent;
 	will-change: transform;
-	transition: var(--t2);
+	transition: var(--t3) linear;
+	// transition: var(--t4) linear var(--t4);
+	// animation-delay: var(--t4);
 }
 
 .menuBtnCrossed {
@@ -130,7 +157,7 @@
 	width: 100%;
 	background: var(--b1);
 	will-change: transform;
-	transition: var(--t2);
+	transition: var(--t3) linear;
 }
 
 .bar1 {

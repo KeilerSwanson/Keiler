@@ -44,12 +44,13 @@
 	justify-content: center;
 	cursor: pointer;
 	will-change: transform;
-	transition: var(--t1);
+	// transition: var(--t1);
 }
 
 .link > svg {
 	color: var(--b1);
 	font-size: 2.75rem;
+	transition: var(--t1) linear;
 }
 
 .description {

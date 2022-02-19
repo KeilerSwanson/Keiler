@@ -23,8 +23,14 @@
   --b2: #1A262D;
   --b3: #141C21;
   --b3opaque: rgb(20, 28, 33, .33);
-  --t1: .125s linear;
-  --t2: .25s linear;
+  --t1: .125s;
+  --t2: .25s;
+  --t3: .375s;
+  --t4: .5s;
+  --t5: .625s;
+  --t6: .75s;
+  --t7: .875s;
+  --t8: 1s;
 }
 
 body {
@@ -33,18 +39,18 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
-  scrollbar-color: var(--accent) var(--darker);
+  scrollbar-color: var(--b1) var(--b3);
   scrollbar-width: thin;
   background: var(--b3);
 }
 
 body::-webkit-scrollbar {
-  background-color: var(--darker);
+  background-color: var(--b3);
   width: 2px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--accent);
+  background-color: var(--b1);
 }
 
 menu, ol, ul {

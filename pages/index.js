@@ -15,6 +15,7 @@ export default function Index() {
     contact: useRef()
   }
   const [menuOpen, openMenu] = useState(false)
+  // const [faded, setFaded] = useState(false)
 
   const toggleMenu = () => openMenu(!menuOpen)
 
