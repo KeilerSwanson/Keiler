@@ -15,11 +15,6 @@ export default function Index() {
     contact: useRef()
   }
   const [menuOpen, openMenu] = useState(false)
-  // const observerOptions = {
-  //   root: null,
-	// 	rootMargin: '0px',
-	// 	threshold: .33
-  // }
 
   const toggleMenu = () => openMenu(!menuOpen)
 
