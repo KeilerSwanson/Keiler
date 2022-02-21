@@ -71,7 +71,6 @@ export default function Contact({ sectRef }) {
 			<form 
 				ref={refs.form}
 				className={styles.form}
-				data-netlify-recaptcha="true"
 				netlify-honeypot="bot-field" 
 				data-netlify='true' 
 				name='contact' 
@@ -116,7 +115,6 @@ export default function Contact({ sectRef }) {
 					className={styles.message}
 					required={true}
 				/>
-				<div data-netlify-recaptcha="true"></div>
 				<Button 
 					text={loading ? 'Sending...' : 'Get In Touch'}
 					handler={submitForm}
