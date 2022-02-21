@@ -1,16 +1,23 @@
-// import Image from 'next/image'
+import { useState, useEffect } from 'react'
+import { setupObserver } from '../lib/observer'
 import SectHead from './SectHead'
-// import { FaGithub, FaArrowUp, FaExternalLinkAlt } from 'react-icons/fa'
 import { RiGithubFill, RiExternalLinkLine  } from 'react-icons/ri'
 import sections from '../styles/Sections.module.scss'
 import styles from '../styles/Projects.module.scss'
 import effects from '../styles/Effects.module.scss'
 
 export default function Projects({ sectRef }) {
+	const [faded, setFaded] = useState(false)
+	const fadeClass = faded ? effects.fadeUp : effects.preFadeUp
+
+	useEffect(() => {
+		setupObserver(sectRef.current, setFaded)
+	}, [sectRef])
+
 	return (
 		<section 
 			ref={sectRef}
-			className={`${styles.projects} ${sections.main}`}
+			className={`${styles.projects} ${sections.main} ${fadeClass}`}
 		>
 			<SectHead
 				num='02.'
@@ -49,14 +56,6 @@ export default function Projects({ sectRef }) {
 							<li className={styles.tool}>SCSS Modules</li>
 							<li className={styles.tool}>Newscatcher</li>
 						</ul>
-						{/* <span className={styles.links}>
-							<a className={`${styles.link} ${effects.link}`} href='https://github.com/KeilerSwanson/Rhetoric' target='_blank' rel='noreferrer'>
-								<RiGithubFill />
-							</a>
-							<a className={`${styles.link} ${effects.link}`} href='https://happy-sinoussi-d8a6c3.netlify.app/' target='_blank' rel='noreferrer'>
-								<RiExternalLinkLine/>
-							</a>
-						</span> */}
 					</div>
 				</li>
 			</div>

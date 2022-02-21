@@ -82,7 +82,7 @@
 .fadeLeft {
 	composes: preFadeLeft;
 	animation-name: fadeLeft;
-	animation-duration: var(--t4);
+	animation-duration: var(--t6);
 	animation-timing-function: linear;
 	animation-fill-mode: forwards;
 }
@@ -95,7 +95,7 @@
 .fadeUp {
 	composes: preFadeUp;
 	animation-name: fadeUp;
-	animation-duration: var(--t4);
+	animation-duration: var(--t6);
 	animation-timing-function: linear;
 	animation-fill-mode: forwards;
 }

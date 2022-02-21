@@ -6,7 +6,6 @@ import effects from '../styles/Effects.module.scss'
 export default function Landing({ projectsRef, scrollTo }) {
 	const [faded, setFaded] = useState(false)
 	const fadeClass = faded ? effects.fadeLeft : effects.preFadeLeft
-	// const fadeClass = faded ? effects.fadeLeft : null
 
 	useEffect(() => {
 		setFaded(true)

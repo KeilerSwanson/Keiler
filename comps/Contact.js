@@ -1,15 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { setupObserver } from '../lib/observer'
 import SectHead from './SectHead'
 import Button from './Button'
 import sections from '../styles/Sections.module.scss'
+import effects from '../styles/Effects.module.scss'
 import styles from '../styles/Contact.module.scss'
 
 export default function Contact({ sectRef }) {
+	const [faded, setFaded] = useState(false)
+	const fadeClass = faded ? effects.fadeUp : effects.preFadeUp
+
+	useEffect(() => {
+		setupObserver(sectRef.current, setFaded)
+	}, [sectRef])
 
 	return (
 		<div 
 			ref={sectRef}
-			className={`${sections.main} ${styles.contact}`}
+			className={`${sections.main} ${styles.contact} ${fadeClass}`}
 		>
 			<SectHead
 				num='03.'

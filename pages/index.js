@@ -15,7 +15,11 @@ export default function Index() {
     contact: useRef()
   }
   const [menuOpen, openMenu] = useState(false)
-  // const [faded, setFaded] = useState(false)
+  // const observerOptions = {
+  //   root: null,
+	// 	rootMargin: '0px',
+	// 	threshold: .33
+  // }
 
   const toggleMenu = () => openMenu(!menuOpen)
 
@@ -54,6 +58,7 @@ export default function Index() {
         />
         <About 
           sectRef={refs.about}
+          // observerOptions={observerOptions}
         />
         <Projects 
           sectRef={refs.projects}

@@ -1,14 +1,23 @@
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { setupObserver } from '../lib/observer'
 import SectHead from './SectHead'
 import sections from '../styles/Sections.module.scss'
 import styles from '../styles/About.module.scss'
 import effects from '../styles/Effects.module.scss'
 
 export default function About({ sectRef }) {
+	const [faded, setFaded] = useState(false)
+	const fadeClass = faded ? effects.fadeUp : effects.preFadeUp
+
+	useEffect(() => {
+		setupObserver(sectRef.current, setFaded)
+	}, [sectRef])
+
 	return (
 		<section 
 			ref={sectRef}
-			className={`${styles.about} ${sections.main}`}	
+			className={`${styles.about} ${sections.main} ${fadeClass}`}	
 		>
 			<SectHead num='01.' title='About' />
 			<div>
