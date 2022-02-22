@@ -7,6 +7,7 @@
 	font-size: 1.4rem;
 	font-weight: 500;
 	transition: var(--t1);
+	will-change: transform;
 }
 
 .button::before, .button::after {
@@ -18,6 +19,7 @@
 	height: 100%;
 	border: solid 2px var(--b1);
 	transition: var(--t1);
+	will-change: transform;
 }
 
 .button::before {

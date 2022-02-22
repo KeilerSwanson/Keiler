@@ -1,7 +1,9 @@
+import { memo } from 'react'
 import Cube from './Cube'
 import styles from '../styles/CubeField.module.scss'
 
-export default function CubeField() {
+function CubeField() {
+
 	return (
 		<div className={styles.cubeField}>
 			<div className={styles.cubeFieldInner}>
@@ -17,3 +19,5 @@ export default function CubeField() {
 		</div>
 	)
 }
+
+export default memo(CubeField)

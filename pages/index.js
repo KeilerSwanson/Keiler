@@ -29,7 +29,7 @@ export default function Index() {
 
   function scrollTo(ref) {
     window.scrollTo({
-      top: ref.current.getBoundingClientRect().top + refs.nav.current.getBoundingClientRect().height + window.pageYOffset,
+      top: ref.current.getBoundingClientRect().top + refs.nav.current.getBoundingClientRect().height + window.pageYOffset - 50,
       left: 0,
       behavior: 'smooth'
     })
@@ -37,7 +37,6 @@ export default function Index() {
   }
 
   useEffect(() => {
-    console.log('window height ', window.innerHeight)
     const vh = window.innerHeight * 0.01
     document.documentElement.style.setProperty('--vh', `${vh}px`);
     window.addEventListener('resize', () => {

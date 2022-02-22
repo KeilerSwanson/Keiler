@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, memo } from 'react'
 import { setupObserver } from '../lib/observer'
 import Image from 'next/image'
 import SectHead from './SectHead'
@@ -6,7 +6,8 @@ import sections from '../styles/Sections.module.scss'
 import styles from '../styles/About.module.scss'
 import effects from '../styles/Effects.module.scss'
 
-export default function About({ sectRef }) {
+function About({ sectRef }) {
+	console.log('about render')
 	const [faded, setFaded] = useState(false)
 	const fadeClass = faded ? effects.fadeUp : effects.preFadeUp
 
@@ -25,7 +26,7 @@ export default function About({ sectRef }) {
 						height={500} 
 						placeholder='blur' 
 						blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOUUtP9DwACPQFuAJ/WoQAAAABJRU5ErkJggg=='
-						alt='Keiler Swanson'
+						alt='Image of Keiler Swanson'
 					/>
 				</div>
 				<div className={styles.textWrap}>
@@ -48,3 +49,5 @@ export default function About({ sectRef }) {
 		</section>
 	)
 }
+
+export default memo(About)

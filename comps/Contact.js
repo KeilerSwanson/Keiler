@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, memo } from 'react'
 import { setupObserver } from '../lib/observer'
 import SectHead from './SectHead'
 import Button from './Button'
@@ -6,7 +6,7 @@ import sections from '../styles/Sections.module.scss'
 import effects from '../styles/Effects.module.scss'
 import styles from '../styles/Contact.module.scss'
 
-export default function Contact({ sectRef }) {
+function Contact({ sectRef }) {
 	const refs = {
 		form: useRef(),
 		name: useRef(),
@@ -113,3 +113,5 @@ export default function Contact({ sectRef }) {
 		</section>
 	)
 }
+
+export default memo(Contact)

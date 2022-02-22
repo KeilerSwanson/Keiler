@@ -12,6 +12,7 @@
 	font-weight: 900;
 	animation-delay: var(--t1);
 	margin: 0 !important;
+	will-change: transform;
 }
 
 .text {
@@ -19,6 +20,7 @@
 	font-weight: 300;
 	margin: 2.5rem 0;
 	animation-delay: var(--t2);
+	will-change: transform;
 }
 
 .landing > button {

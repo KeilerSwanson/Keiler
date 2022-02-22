@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, memo } from 'react'
 import { setupObserver } from '../lib/observer'
 import SectHead from './SectHead'
 import { RiGithubFill, RiExternalLinkLine  } from 'react-icons/ri'
@@ -6,7 +6,7 @@ import sections from '../styles/Sections.module.scss'
 import styles from '../styles/Projects.module.scss'
 import effects from '../styles/Effects.module.scss'
 
-export default function Projects({ sectRef }) {
+function Projects({ sectRef }) {
 	const [faded, setFaded] = useState(false)
 	const fadeClass = faded ? effects.fadeUp : effects.preFadeUp
 
@@ -27,6 +27,7 @@ export default function Projects({ sectRef }) {
 						playsInline
 						muted
 						poster='/assets/rhetoric-poster.png'
+						alt="Video demo of Keiler's Rhetoric app"
 					>
 						<source src='/assets/rhetoric-demo.webm' type='video/webm' />
 						<source src='/assets/rhetoric-demo.mp4' type='video/mp4' />
@@ -67,3 +68,5 @@ export default function Projects({ sectRef }) {
 		</section>
 	)
 }
+
+export default memo(Projects)

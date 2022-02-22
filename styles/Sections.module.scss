@@ -1,21 +1,38 @@
 .main {
-	padding: 15rem 5%;
+	padding: 12.5rem 5%;
+	will-change: transform;
+}
+
+.main:last-child {
+	padding: 12.5rem 5% 7.5rem;
 }
 
 @media screen and (min-width: 1024px) {
 	.main {
-		padding: 15rem 10%;
+		padding: 12.5rem 10%;
+	}
+
+	.main:last-child {
+		padding: 12.5rem 10% 7.5rem;
 	}
 }
 
 @media screen and (min-width: 1366px) {
 	.main {
-		padding: 15rem 15%;
+		padding: 12.5rem 15%;
+	}
+	
+	.main:last-child {
+		padding: 12.5rem 15% 7.5rem;
 	}
 }
 
 @media screen and (min-width: 1920px) {
 	.main {
-		padding: 15rem 20%;
+		padding: 12.5rem 20%;
+	}
+
+	.main:last-child {
+		padding: 12.5rem 20% 7.5rem;
 	}
 }

@@ -37,6 +37,7 @@
 	background: var(--b2);
 	transform: translateY(-100%);
 	transition: var(--t3) linear;
+	will-change: transform;
 }
 
 .navClear > .menu {
@@ -55,6 +56,7 @@
 	font-weight: 700;
 	cursor: pointer;
 	transition: var(--t1) linear;
+	will-change: transform;
 }
 
 .menuItem:nth-child(1) {
@@ -100,6 +102,7 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	will-change: transform;
 }
 
 .link:nth-child(1) {
@@ -131,6 +134,7 @@
 	width: 3rem;
 	background: transparent;
 	transition: var(--t3) linear;
+	will-change: transform;
 }
 
 .menuBtnCrossed {
@@ -168,6 +172,7 @@
 	.menuBtn {
 		display: none;
 	}
+
 	.menu {
 		position: unset;;
 		display: flex;
@@ -180,13 +185,16 @@
 		background-color: transparent;
 		transform: translateY(0);
 	}
+
 	.menuItem, .menuItem::before {
 		font-size: 1.4rem;
 		font-weight: 500;
 	}
+
 	.links {
 		gap: .75rem;
 	}
+
 	.link > svg {
 		font-size: 2.25rem;
 	}
@@ -202,6 +210,7 @@
 	.nav {
 		padding: 0 15%;
 	}
+
 	.menuItem:hover {
 		color: var(--b1);
 	}
