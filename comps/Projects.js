@@ -27,9 +27,10 @@ export default function Projects({ sectRef }) {
 				<li className={styles.project}>
 					<video 
 						className={styles.video}
+						controls
 						autoPlay
 						loop 
-						// controls 
+						playsInline
 						muted
 						poster='/assets/rhetoric-poster.png'
 					>
