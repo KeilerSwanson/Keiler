@@ -14,27 +14,15 @@ export default function Nav({ menuOpen, toggleMenu, scrollTo, navRef, aboutRef, 
 	}, [])
 
 	return (
-		<nav 
-			ref={navRef} 
-			className={navClass}
-		>
+		<nav ref={navRef} className={navClass}>
 			<menu className={styles.menu}>
-				<li
-					className={`${styles.menuItem} ${effects.menuItem} ${fadeClass}`}
-					onClick={() => scrollTo(aboutRef)}
-				>
+				<li className={`${styles.menuItem} ${effects.menuItem} ${fadeClass}`} onClick={() => scrollTo(aboutRef)}>
 					About
 				</li>
-				<li
-					className={`${styles.menuItem} ${effects.menuItem} ${fadeClass}`}
-					onClick={() => scrollTo(projectsRef)}
-				>
+				<li className={`${styles.menuItem} ${effects.menuItem} ${fadeClass}`} onClick={() => scrollTo(projectsRef)}>
 					Projects
 				</li>
-				<li
-					className={`${styles.menuItem} ${effects.menuItem} ${fadeClass}`}
-					onClick={() => scrollTo(contactRef)}
-				>
+				<li className={`${styles.menuItem} ${effects.menuItem} ${fadeClass}`} onClick={() => scrollTo(contactRef)}>
 					Contact
 				</li>
 				<li className={styles.links}>
@@ -56,15 +44,12 @@ export default function Nav({ menuOpen, toggleMenu, scrollTo, navRef, aboutRef, 
 					</a>
 				</li>
 			</menu>
-			<span className={`${styles.menuBtnWrap} ${fadeClass}`}>
-				<button 
-					className={`${menuBtnClass}`}
-					onClick={toggleMenu}
-				>
-					<span className={styles.bar1} />
-					<span className={styles.bar2} />
+			<div className={`${styles.menuBtnWrap} ${fadeClass}`}>
+				<button className={`${menuBtnClass}`} onClick={toggleMenu}>
+					<div className={styles.bar1} />
+					<div className={styles.bar2} />
 				</button>
-			</span>
+			</div>
 		</nav>
 	)
 }

@@ -4,12 +4,12 @@ export default function Cube() {
 
 	return (
 		<div className={styles.cube}>
-			<span className={styles.side} />
-			<span className={styles.side} />
-			<span className={styles.side} />
-			<span className={styles.side} />
-			<span className={styles.side} />
-			<span className={styles.side} />
+			<div className={styles.side} />
+			<div className={styles.side} />
+			<div className={styles.side} />
+			<div className={styles.side} />
+			<div className={styles.side} />
+			<div className={styles.side} />
 		</div>
 	)
 }

@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { disableBodyScroll, enableBodyScroll } from '../lib/scroll'
+import Head from 'next/head'
 import CubeField from '../comps/CubeField'
 import Nav from '../comps/Nav'
 import Landing from '../comps/Landing'
@@ -36,6 +36,16 @@ export default function Index() {
     if (menuOpen) toggleMenu()
   }
 
+  useEffect(() => {
+    console.log('window height ', window.innerHeight)
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    })
+  })
+
   return (
     <div>
       <Head>
@@ -56,19 +66,10 @@ export default function Index() {
         contactRef={refs.contact}
       />
       <main>
-        <Landing 
-          projectsRef={refs.projects}
-          scrollTo={scrollTo}
-        />
-        <About 
-          sectRef={refs.about}
-        />
-        <Projects 
-          sectRef={refs.projects}
-        />
-        <Contact 
-          sectRef={refs.contact}
-        />
+        <Landing projectsRef={refs.projects} scrollTo={scrollTo} />
+        <About sectRef={refs.about} />
+        <Projects sectRef={refs.projects} />
+        <Contact sectRef={refs.contact} />
       </main>
     </div>
   )

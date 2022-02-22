@@ -1,8 +1,8 @@
-.projects {
+.projectsSect {
 	width: 100%;
 }
 
-.content {
+.projects {
 	position: relative;
 }	
 
@@ -12,11 +12,10 @@
 }
 
 .video {
-	height: fit-content;
 	max-width: 700px;
 	margin: 0 0 2.5rem 0;
-	object-fit: contain;
-	object-position: bottom;
+	display: block;
+	display: flex;
 }
 
 .info {
@@ -46,8 +45,6 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	will-change: transform;
-	// transition: var(--t1);
 }
 
 .link > svg {
@@ -66,7 +63,6 @@
 	flex-wrap: wrap;
 	gap: 1rem;
 	margin-top: 1.5rem;
-	// filter: var(--s1);
 }
 
 .tool {

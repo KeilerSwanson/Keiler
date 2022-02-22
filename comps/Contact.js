@@ -16,8 +16,8 @@ export default function Contact({ sectRef }) {
 	}
 	const [faded, setFaded] = useState(false)
 	const [loading, setLoading] = useState(false)
-	const fadeClass = faded ? effects.fadeUp : effects.preFadeUp
 	const [response, setResponse] = useState(null)
+	const fadeClass = faded ? effects.fadeUp : effects.preFadeUp
 	const responseClass = response ? styles.responseShow : styles.response
 
 	useEffect(() => {
@@ -60,17 +60,11 @@ export default function Contact({ sectRef }) {
 	}
 
 	return (
-		<div 
-			ref={sectRef}
-			className={`${sections.main} ${styles.contact} ${fadeClass}`}
-		>
-			<SectHead
-				num='03.'
-				title='Contact'
-			/>
+		<section ref={sectRef} className={`${sections.main} ${styles.contactSect} ${fadeClass}`}>
+			<SectHead num='03.'title='Contact' />
 			<form 
 				ref={refs.form}
-				className={styles.form}
+				className={styles.contact}
 				netlify-honeypot="bot-field" 
 				data-netlify='true' 
 				name='contact' 
@@ -87,7 +81,6 @@ export default function Contact({ sectRef }) {
 					type='text' 
 					placeholder='Name' 
 					className={styles.name}
-					required={true}
 				/>
 				<label htmlFor='email'>Email</label>
 				<input 
@@ -96,7 +89,6 @@ export default function Contact({ sectRef }) {
 					type='email' 
 					placeholder='Email' 
 					className={styles.email}
-					required={true}
 				/>
 				<label htmlFor='phone'>Phone</label>
 				<input
@@ -105,7 +97,6 @@ export default function Contact({ sectRef }) {
 					type='tel'
 					placeholder='Phone'
 					className={styles.phone}
-					required={false}
 				/>
 				<label htmlFor='message'>Message</label>
 				<textarea 
@@ -113,19 +104,12 @@ export default function Contact({ sectRef }) {
 					name='message' 
 					placeholder='Message' 
 					className={styles.message}
-					required={true}
 				/>
-				<Button 
-					text={loading ? 'Sending...' : 'Get In Touch'}
-					handler={submitForm}
-					loading={loading}
-				/>
-				<span 
-					className={responseClass}
-				>
+				<Button text={loading ? 'Sending...' : 'Get In Touch'} handler={submitForm} />
+				<div className={responseClass}>
 					{(response === 200) ? "Message sent successfully!" : "Sorry, it looks like there was an error. Please refresh the page and try again."}
-				</span>
+				</div>
 			</form>
-		</div>
+		</section>
 	)
 }

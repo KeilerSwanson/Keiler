@@ -1,5 +1,5 @@
-import styles from '../styles/CubeField.module.scss'
 import Cube from './Cube'
+import styles from '../styles/CubeField.module.scss'
 
 export default function CubeField() {
 	return (

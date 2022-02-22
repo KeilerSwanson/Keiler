@@ -15,15 +15,9 @@ export default function Projects({ sectRef }) {
 	}, [sectRef])
 
 	return (
-		<section 
-			ref={sectRef}
-			className={`${styles.projects} ${sections.main} ${fadeClass}`}
-		>
-			<SectHead
-				num='02.'
-				title='Projects'
-			/>
-			<div className={styles.content}>
+		<section ref={sectRef} className={`${styles.projectsSect} ${sections.main} ${fadeClass}`}>
+			<SectHead num='02.' title='Projects' />
+			<div className={styles.projects}>
 				<li className={styles.project}>
 					<video 
 						className={styles.video}
@@ -38,17 +32,27 @@ export default function Projects({ sectRef }) {
 						<source src='/assets/rhetoric-demo.mp4' type='video/mp4' />
 					</video>
 					<div className={styles.info}>
-						<span className={styles.titleLinks}>
+						<div className={styles.titleLinks}>
 							<h3 className={styles.title}>Rhetoric</h3>
-							<span className={styles.links}>
-								<a className={`${styles.link} ${effects.link}`} href='https://github.com/KeilerSwanson/Rhetoric' target='_blank' rel='noreferrer'>
+							<div className={styles.links}>
+								<a 
+									className={`${styles.link} ${effects.link}`} 
+									href='https://github.com/KeilerSwanson/Rhetoric' 
+									target='_blank' 
+									rel='noreferrer'
+								>
 									<RiGithubFill />
 								</a>
-								<a className={`${styles.link} ${effects.link}`} href='https://happy-sinoussi-d8a6c3.netlify.app/' target='_blank' rel='noreferrer'>
+								<a 
+									className={`${styles.link} ${effects.link}`} 
+									href='https://happy-sinoussi-d8a6c3.netlify.app/' 
+									target='_blank' 
+									rel='noreferrer'
+								>
 									<RiExternalLinkLine/>
 								</a>
-							</span>
-						</span>
+							</div>
+						</div>
 						<p className={styles.description}>
 							A tool for comparing news coverage across the media landscape. Search for articles by topic, select from more than 50 media sources, and bookmark articles for later.
 						</p>
@@ -60,6 +64,6 @@ export default function Projects({ sectRef }) {
 					</div>
 				</li>
 			</div>
-	</section>
+		</section>
 	)
 }

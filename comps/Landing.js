@@ -12,8 +12,8 @@ export default function Landing({ projectsRef, scrollTo }) {
 	}, [])
 
 	return (
-		<section className={styles.landing}>
-			<header className={styles.content}>
+		<section className={styles.landingSect}>
+			<header className={styles.landing}>
 				<h1 className={`${styles.heading} ${fadeClass}`}>
 					I'm Keiler,
 					<br />
@@ -25,7 +25,7 @@ export default function Landing({ projectsRef, scrollTo }) {
 				<Button 
 					text='Check Out My Work'
 					handler={() => scrollTo(projectsRef)}
-					fadeClass={fadeClass}
+					effectClass={fadeClass}
 				/>
 			</header>
 		</section>

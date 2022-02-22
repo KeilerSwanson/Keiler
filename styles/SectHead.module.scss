@@ -8,17 +8,14 @@
 .heading {
 	font-size: 3.5rem;
 	font-weight: 800;
-	// margin-right: 10px;
 	display: flex;
 	align-items: center;
-	// margin-bottom: 10rem;
 	margin: 0 10px 7.5rem 0;
 	align-self: flex-start;
 }
 
 .heading::after {
 	content: '';
-	// position: absolute;
 	height: 2px;
 	background: var(--b2);
 	width: 25vw;

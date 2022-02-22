@@ -32,10 +32,10 @@
 	align-items: center;
 	gap: 3rem;
 	height: 100vh;
+	height: calc(var(--vh) * 100);
 	width: 100vw;
 	background: var(--b2);
 	transform: translateY(-100%);
-	will-change: transform;
 	transition: var(--t3) linear;
 }
 
@@ -100,8 +100,6 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	will-change: transform;
-	// transition: var(--t1) linear;
 }
 
 .link:nth-child(1) {
@@ -132,10 +130,7 @@
 	height: 100%;
 	width: 3rem;
 	background: transparent;
-	will-change: transform;
 	transition: var(--t3) linear;
-	// transition: var(--t4) linear var(--t4);
-	// animation-delay: var(--t4);
 }
 
 .menuBtnCrossed {
@@ -156,7 +151,6 @@
 	height: 2px;
 	width: 100%;
 	background: var(--b1);
-	will-change: transform;
 	transition: var(--t3) linear;
 }
 

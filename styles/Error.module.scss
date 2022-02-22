@@ -13,8 +13,17 @@
 	gap: 2.5rem;
 }
 
+.code {
+	font-size: 3.5rem;
+	font-weight: 800;
+}
+
 .message {
 	text-align: center;
-	font-size: 2.5rem;
-	font-weight: 700;
+	font-size: 1.8rem;
+	font-weight: 300;
+}
+
+.error a {
+	top: 1rem;
 }

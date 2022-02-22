@@ -1,5 +1,4 @@
 .cubeField {
-	// position: fixed;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -19,7 +18,6 @@
 	align-items: center;
 	justify-content: space-around;
 	animation: scroll 5s linear infinite;
-	will-change: transform;
 }
 
 @keyframes scroll {

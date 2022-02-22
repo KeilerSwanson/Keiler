@@ -1,8 +1,9 @@
-.landing {
+.landingSect {
 	display: flex;
 	align-items: center;
 	padding: 0 5%;
 	height: 100vh;
+	height: calc(var(--vh) * 100);
 	width: 100vw;
 }
 
@@ -20,7 +21,7 @@
 	animation-delay: var(--t2);
 }
 
-.content > button {
+.landing > button {
 	left: .5rem;
 	top: 1rem;
 	animation-delay: var(--t3);
@@ -33,13 +34,13 @@
 }
 
 @media screen and (min-width: 1024px) {
-	.landing {
+	.landingSect {
 		padding: 0 10%;
 	}
 }
 
 @media screen and (min-width: 1366px) {
-	.landing {
+	.landingSect {
 		padding: 0 15%;
 	}
 	.text {
@@ -48,7 +49,7 @@
 }
 
 @media screen and (min-width: 1920px) {
-	.landing {
+	.landingSect {
 		padding: 0 20%;
 	}
 }
