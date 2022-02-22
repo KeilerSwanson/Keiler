@@ -29,7 +29,7 @@ export default function Projects({ sectRef }) {
 						className={styles.video}
 						autoPlay
 						loop 
-						controls 
+						// controls 
 						muted
 						poster='/assets/rhetoric-poster.png'
 					>

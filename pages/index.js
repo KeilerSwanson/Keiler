@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useState, useRef } from 'react'
+import { disableBodyScroll, enableBodyScroll } from '../lib/scroll'
 import CubeField from '../comps/CubeField'
 import Nav from '../comps/Nav'
 import Landing from '../comps/Landing'
@@ -16,7 +17,15 @@ export default function Index() {
   }
   const [menuOpen, openMenu] = useState(false)
 
-  const toggleMenu = () => openMenu(!menuOpen)
+  function toggleMenu() {
+    if (menuOpen) {
+      enableBodyScroll()
+      openMenu(false)
+    } else {
+      disableBodyScroll()
+      openMenu(true)
+    }
+  }
 
   function scrollTo(ref) {
     window.scrollTo({
@@ -53,7 +62,6 @@ export default function Index() {
         />
         <About 
           sectRef={refs.about}
-          // observerOptions={observerOptions}
         />
         <Projects 
           sectRef={refs.projects}
