@@ -11,11 +11,18 @@
 	flex-direction: column;
 }
 
+.videoWrap {
+		max-width: 700px;
+		margin: 0 0 2.5rem 0;
+}
+
+// .video {
+// 	max-width: 700px;
+// 	margin: 0 0 2.5rem 0;
+// }
+
 .video {
-	max-width: 700px;
-	margin: 0 0 2.5rem 0;
-	display: block;
-	display: flex;
+	width: 100%;
 }
 
 .info {
@@ -77,10 +84,14 @@
 		flex-direction: row-reverse;
 		align-items: flex-start;
 	}
-	.video {
+	.videoWrap {
 		width: 50%;
 		margin: 0 0 0 1.5rem;
 	}
+	// .video {
+	// 	width: 50%;
+	// 	margin: 0 0 0 1.5rem;
+	// }
 	.info {
 		align-items: flex-end;
 		width: 50%;

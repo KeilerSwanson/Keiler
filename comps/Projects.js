@@ -20,17 +20,20 @@ function Projects({ sectRef }) {
 			<SectHead num='02.' title='Projects' />
 			<div className={styles.projects}>
 				<li className={styles.project}>
-					<video 
-						className={styles.video}
-						autoPlay
-						loop 
-						muted
-						poster='/assets/rhetoric-min.jpeg'
-						alt="Video demo of Keiler's Rhetoric app"
-					>
-						<source src='/assets/rhetoric-demo.mp4' type='video/mp4' />
-						<source src='/assets/rhetoric-demo.webm' type='video/webm' />
-					</video>
+					{/* Wrap video in div */}
+					<figure className={styles.videoWrap}>
+						<video 
+							className={styles.video}
+							autoPlay
+							loop 
+							muted
+							poster='/assets/rhetoric-min.jpeg'
+							alt="Video demo of Keiler's Rhetoric app"
+						>
+							<source src='/assets/rhetoric-demo.mp4' type='video/mp4' />
+							<source src='/assets/rhetoric-demo.webm' type='video/webm' />
+						</video>
+					</figure>
 					<div className={styles.info}>
 						<div className={styles.titleLinks}>
 							<h3 className={styles.title}>Rhetoric</h3>
@@ -40,6 +43,7 @@ function Projects({ sectRef }) {
 									href='https://github.com/KeilerSwanson/Rhetoric' 
 									target='_blank' 
 									rel='noreferrer'
+									aria-label='Github'
 								>
 									<RiGithubFill />
 								</a>
@@ -48,6 +52,7 @@ function Projects({ sectRef }) {
 									href='https://happy-sinoussi-d8a6c3.netlify.app/' 
 									target='_blank' 
 									rel='noreferrer'
+									aria-label='Live app'
 								>
 									<RiExternalLinkLine/>
 								</a>

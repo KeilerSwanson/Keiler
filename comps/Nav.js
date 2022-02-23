@@ -31,6 +31,7 @@ export default function Nav({ menuOpen, toggleMenu, scrollTo, navRef, aboutRef, 
 						href='https://github.com/KeilerSwanson' 
 						target='_blank' 
 						rel='noreferrer'
+						aria-label='Github'
 					>
 						<RiGithubFill />
 					</a>
@@ -39,13 +40,18 @@ export default function Nav({ menuOpen, toggleMenu, scrollTo, navRef, aboutRef, 
 						href='https://linkedin.com/in/keiler-swanson/' 
 						target='_blank' 
 						rel='noreferrer'
+						aria-label='LinkedIn'
 					>
 						<RiLinkedinFill />
 					</a>
 				</li>
 			</menu>
 			<div className={`${styles.menuBtnWrap} ${fadeClass}`}>
-				<button className={`${menuBtnClass}`} onClick={toggleMenu}>
+				<button 
+					className={`${menuBtnClass}`} 
+					onClick={toggleMenu}
+					aria-label='Open menu'
+				>
 					<div className={styles.bar1} />
 					<div className={styles.bar2} />
 				</button>
