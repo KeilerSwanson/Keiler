@@ -7,6 +7,12 @@
 	width: 100vw;
 }
 
+.landing {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
 .heading {
 	font-size: 6rem;
 	font-weight: 900;
@@ -18,14 +24,13 @@
 .text {
 	font-size: 1.8rem;
 	font-weight: 300;
-	margin: 2.5rem 0;
 	animation-delay: var(--t2);
 	will-change: transform;
 }
 
 .landing > button {
 	left: .5rem;
-	top: 1rem;
+	top: 1.5rem;
 	animation-delay: var(--t3);
 }
 

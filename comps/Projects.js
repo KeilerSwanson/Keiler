@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useState, useEffect, memo } from 'react'
 import { setupObserver } from '../lib/observer'
 import SectHead from './SectHead'
@@ -21,16 +22,14 @@ function Projects({ sectRef }) {
 				<li className={styles.project}>
 					<video 
 						className={styles.video}
-						controls
 						autoPlay
 						loop 
-						playsInline
 						muted
-						poster='/assets/rhetoric-poster.png'
+						poster='/assets/rhetoric-min.jpeg'
 						alt="Video demo of Keiler's Rhetoric app"
 					>
-						<source src='/assets/rhetoric-demo.webm' type='video/webm' />
 						<source src='/assets/rhetoric-demo.mp4' type='video/mp4' />
+						<source src='/assets/rhetoric-demo.webm' type='video/webm' />
 					</video>
 					<div className={styles.info}>
 						<div className={styles.titleLinks}>

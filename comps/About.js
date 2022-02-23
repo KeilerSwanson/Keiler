@@ -7,7 +7,6 @@ import styles from '../styles/About.module.scss'
 import effects from '../styles/Effects.module.scss'
 
 function About({ sectRef }) {
-	console.log('about render')
 	const [faded, setFaded] = useState(false)
 	const fadeClass = faded ? effects.fadeUp : effects.preFadeUp
 
@@ -21,7 +20,7 @@ function About({ sectRef }) {
 			<div className={styles.about}>
 				<div className={`${styles.avatar} ${effects.avatar}`}>
 					<Image 
-						src='/assets/avatar.jpeg' 
+						src='/assets/avatar-min.jpeg' 
 						width={500} 
 						height={500} 
 						placeholder='blur' 
@@ -32,7 +31,9 @@ function About({ sectRef }) {
 				<div className={styles.textWrap}>
 					<p className={styles.text}>
 						I first started programming after an abrupt end to my amateur athletic career. Not quite sure what to do with myself, I took a handful of courses online, one of which was Harvard’s CS50: Introduction to Computer Science. I was immediately hooked. That seemingly anything could emerge from a well-ordered collection of zeroes and ones felt, and still feels, like magic. 
-						<br /><br />
+						{/* <br /><br /> */}
+					</p>
+					<p className={styles.text}>
 						In the time since I’ve focused primarily on the front-end, learning technologies from basic HTML and CSS to more advanced frameworks like NextJS. I'm always picking up new tools and methods but I'm currently most comfortable with: 
 					</p>
 					<ul className={styles.stack}>
