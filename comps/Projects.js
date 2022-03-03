@@ -62,9 +62,10 @@ function Projects({ sectRef }) {
 							A tool for comparing news coverage across the media landscape. Search for articles by topic, select from more than 50 media sources, and bookmark articles for later.
 						</p>
 						<ul className={styles.stack}>
-							<li className={styles.tool}>NextJS</li>
+							<li className={styles.tool}>Next.js</li>
 							<li className={styles.tool}>SCSS Modules</li>
 							<li className={styles.tool}>Newscatcher</li>
+							<li className={styles.tool}>Netlify</li>
 						</ul>
 					</div>
 				</li>
