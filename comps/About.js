@@ -20,7 +20,7 @@ function About({ sectRef }) {
 			<div className={styles.about}>
 				<div className={`${styles.avatar} ${effects.avatar}`}>
 					<Image 
-						src='/assets/avatar-color-crop-min.jpeg' 
+						src='/assets/avatar-pro-min-crop.jpg' 
 						width={500} 
 						height={500} 
 						placeholder='blur' 
