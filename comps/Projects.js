@@ -58,7 +58,7 @@ function Projects({ sectRef }) {
 							</div>
 						</div>
 						<p className={styles.description}>
-						A single-page web app for comparing news coverage across the media landscape. Search for articles by topic, select from more than 50 media sources, and bookmark articles for later. 
+							A single-page web app for comparing news coverage across the media landscape.
 						</p>
 						<ul className={styles.stack}>
 							<li className={styles.tool}>Next.js</li>
@@ -75,7 +75,7 @@ function Projects({ sectRef }) {
 							autoPlay
 							loop 
 							muted
-							poster='/assets/swanson-furniture.jpeg'
+							poster='/assets/swanson-furniture.jpg'
 							alt="Video demo of the Swanson Furniture website"
 						>
 							<source src='/assets/swanson-furniture-demo.mp4' type='video/mp4' />

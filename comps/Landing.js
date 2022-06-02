@@ -20,7 +20,7 @@ export default function Landing({ projectsRef, scrollTo }) {
 					I build stuff with bits.
 				</h1>
 				<p className={`${styles.text} ${fadeClass}`}>
-					I’m a frontend developer who loves problem solving and good whiskey. My current focus is building delightful and performant applications for the web.
+					I’m a frontend developer who loves problem solving and a decent bourbon. My current focus is building delightful and performant user experiences for the web.
 				</p>
 				<Button 
 					text='Check Out My Work'
