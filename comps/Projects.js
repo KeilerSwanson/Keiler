@@ -27,7 +27,7 @@ function Projects({ sectRef }) {
 							loop 
 							muted
 							poster='/assets/rhetoric-min.jpeg'
-							alt="Video demo of Keiler's Rhetoric app"
+							alt="Video demo of Rhetoric app"
 						>
 							<source src='/assets/rhetoric-demo.mp4' type='video/mp4' />
 							<source src='/assets/rhetoric-demo.webm' type='video/webm' />
@@ -75,7 +75,7 @@ function Projects({ sectRef }) {
 							autoPlay
 							loop 
 							muted
-							poster='/assets/swanson-furniture.jpg'
+							poster='/assets/swanson-furniture-min.jpeg'
 							alt="Video demo of the Swanson Furniture website"
 						>
 							<source src='/assets/swanson-furniture-demo.mp4' type='video/mp4' />
