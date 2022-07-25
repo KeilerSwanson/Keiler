@@ -1,11 +1,8 @@
 import styles from '../styles/SectHead.module.scss'
 
-export default function SectHead({ num, title }) {
+export default function SectHead({ title }) {
 	
 	return (
-		<h2 className={styles.heading}>
-			<div className={styles.num}>{num}</div>
-			{title}
-		</h2>
+		<h2 className={styles.heading}>{title}</h2>
 	)
 }

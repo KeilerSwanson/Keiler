@@ -61,7 +61,7 @@ function Contact({ sectRef }) {
 
 	return (
 		<section ref={sectRef} className={`${sections.main} ${styles.contactSect} ${fadeClass}`}>
-			<SectHead num='03.'title='Contact' />
+			<SectHead title='Contact' />
 			<form 
 				ref={refs.form}
 				className={styles.contact}

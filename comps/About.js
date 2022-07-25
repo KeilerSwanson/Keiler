@@ -16,7 +16,7 @@ function About({ sectRef }) {
 
 	return (
 		<section ref={sectRef} className={`${styles.aboutSect} ${sections.main} ${fadeClass}`}>
-			<SectHead num='01.' title='About' />
+			<SectHead title='About' />
 			<div className={styles.about}>
 				<div className={`${styles.avatar} ${effects.avatar}`}>
 					<Image 

@@ -17,7 +17,7 @@ function Projects({ sectRef }) {
 
 	return (
 		<section ref={sectRef} className={`${styles.projectsSect} ${sections.main} ${fadeClass}`}>
-			<SectHead num='02.' title='Projects' />
+			<SectHead title='Projects' />
 			<div className={styles.projects}>
 				<li className={styles.project}>
 					<figure className={styles.videoWrap}>
