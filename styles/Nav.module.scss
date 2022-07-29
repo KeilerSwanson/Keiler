@@ -72,26 +72,11 @@
 }
 
 .menuItem::before {
+	content: '/';
 	font-size: 2.5rem;
 	font-weight: 700;
 	color: var(--b1);
 	margin-right: 2.5px;
-}
-
-// .menuItem:nth-child(1)::before {
-// 	content: '01.'
-// }
-
-// .menuItem:nth-child(2)::before {
-// 	content: '02.'
-// }
-
-// .menuItem:nth-child(3)::before {
-// 	content: '03.'
-// }
-
-.menuItem::before {
-	content: '/'
 }
 
 .links {

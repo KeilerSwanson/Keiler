@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { useState, useEffect, memo } from 'react'
 import { setupObserver } from '../lib/observer'
 import SectHead from './SectHead'
@@ -39,21 +38,21 @@ function Projects({ sectRef }) {
 							<div className={styles.links}>
 								<a 
 									className={`${styles.link} ${effects.link}`} 
+									href='https://happy-sinoussi-d8a6c3.netlify.app/' 
+									target='_blank' 
+									rel='noreferrer'
+									aria-label='Live app'
+								>
+									<RiExternalLinkLine />
+								</a>
+								<a 
+									className={`${styles.link} ${effects.link}`} 
 									href='https://github.com/KeilerSwanson/Rhetoric' 
 									target='_blank' 
 									rel='noreferrer'
 									aria-label='Github'
 								>
 									<RiGithubFill />
-								</a>
-								<a 
-									className={`${styles.link} ${effects.link}`} 
-									href='https://happy-sinoussi-d8a6c3.netlify.app/' 
-									target='_blank' 
-									rel='noreferrer'
-									aria-label='Live app'
-								>
-									<RiExternalLinkLine/>
 								</a>
 							</div>
 						</div>
@@ -88,21 +87,21 @@ function Projects({ sectRef }) {
 							<div className={styles.links}>
 								<a 
 									className={`${styles.link} ${effects.link}`} 
+									href='https://swansonfurniture.com' 
+									target='_blank' 
+									rel='noreferrer'
+									aria-label='Live app'
+								>
+									<RiExternalLinkLine />
+								</a>
+								<a 
+									className={`${styles.link} ${effects.link}`} 
 									href='https://github.com/KeilerSwanson/swanson-furniture' 
 									target='_blank' 
 									rel='noreferrer'
 									aria-label='Github'
 								>
 									<RiGithubFill />
-								</a>
-								<a 
-									className={`${styles.link} ${effects.link}`} 
-									href='https://swansonfurniture.com' 
-									target='_blank' 
-									rel='noreferrer'
-									aria-label='Live app'
-								>
-									<RiExternalLinkLine/>
 								</a>
 							</div>
 						</div>

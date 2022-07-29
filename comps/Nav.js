@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { RiGithubFill, RiLinkedinFill  } from 'react-icons/ri'
+import { RiGithubFill, RiLinkedinFill } from 'react-icons/ri'
 import styles from '../styles/Nav.module.scss'
 import effects from '../styles/Effects.module.scss'
 
@@ -28,21 +28,21 @@ export default function Nav({ menuOpen, toggleMenu, scrollTo, navRef, aboutRef, 
 				<li className={styles.links}>
 					<a 
 						className={`${styles.link} ${effects.link} ${fadeClass}`} 
-						href='https://github.com/KeilerSwanson' 
-						target='_blank' 
-						rel='noreferrer'
-						aria-label='Github'
-					>
-						<RiGithubFill />
-					</a>
-					<a 
-						className={`${styles.link} ${effects.link} ${fadeClass}`} 
 						href='https://linkedin.com/in/keiler-swanson/' 
 						target='_blank' 
 						rel='noreferrer'
 						aria-label='LinkedIn'
 					>
 						<RiLinkedinFill />
+					</a>
+					<a 
+						className={`${styles.link} ${effects.link} ${fadeClass}`} 
+						href='https://github.com/KeilerSwanson' 
+						target='_blank' 
+						rel='noreferrer'
+						aria-label='Github'
+					>
+						<RiGithubFill />
 					</a>
 				</li>
 			</menu>
